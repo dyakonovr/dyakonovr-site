@@ -11,10 +11,14 @@
 
 @import "./components/blocks/nav";
 @import "./components/blocks/socials";
+@import "./components/blocks/skill";
+@import "./components/blocks/project";
 
 // Компоненты страницы
 
 @import "./components/universal/preloader";
 @import "./components/universal/header";
 @import "./components/index/hero";
+@import "./components/index/skills";
+@import "./components/index/projects";
 @import "./components/universal/footer";

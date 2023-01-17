@@ -6,6 +6,10 @@
     align-items: center;
   }
 
+  &__logo {
+    margin: -10px 0 0;
+  }
+
   &__nav {
     margin: 0 var(--middle-offset) 0 auto;
   }

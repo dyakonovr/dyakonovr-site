@@ -6,3 +6,29 @@
 .section {
   padding: var(--section-offset) 0;
 }
+
+.title {
+  margin: 0;
+  font-size: 35px;
+  text-align: center;
+}
+
+.link-hover {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: currentColor;
+    transition: width 0.2s ease-in-out;
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+}

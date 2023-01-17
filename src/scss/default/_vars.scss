@@ -1,7 +1,8 @@
 :root {
   // Цвета
-  --color-white: rgb(224 224 224);
+  --color-white: #fff;
   --color-black: #161616;
+  --color-main: #b146ea;
 
   // Шрифты
   --font-family: "PT Sans";
@@ -16,5 +17,5 @@
   --big-offset: 40px;
   --middle-offset: 20px;
   --small-offset: 10px;
-  --section-offset: 50px;
+  --section-offset: 75px;
 }

@@ -1,0 +1,48 @@
+.project {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+
+  &__image {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+    img {
+      display: block;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    height: 100%;
+    text-align: center;
+    background-color: var(--color-white);
+  }
+
+  &__title {
+    margin: 0 0 var(--middle-offset);
+    font-size: 35px;
+  }
+
+  &__descr {
+    margin: 0;
+    max-width: 80%;
+    font-size: 20px;
+    color: var(--color-black);
+    opacity: 0.8;
+  }
+
+  &__link {
+    margin: var(--big-offset) 0 0;
+    color: var(--color-black);
+  }
+
+  &:not(:last-child) {
+    margin: 0 0 var(--big-offset);
+  }
+}
