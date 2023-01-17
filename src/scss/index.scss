@@ -7,9 +7,14 @@
 @import "./default/settings";
 @import "./default/universal";
 
+// Универсальные блоки
+
+@import "./components/blocks/nav";
+@import "./components/blocks/socials";
+
 // Компоненты страницы
 
 @import "./components/universal/preloader";
 @import "./components/universal/header";
-@import "./components/index/component";
+@import "./components/index/hero";
 @import "./components/universal/footer";

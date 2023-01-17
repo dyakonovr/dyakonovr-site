@@ -1,0 +1,15 @@
+.nav {
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    &:not(:first-child) {
+      margin: 0 0 0 var(--small-offset);
+    }
+  }
+
+  &__link {
+    font-size: 18px;
+  }
+}

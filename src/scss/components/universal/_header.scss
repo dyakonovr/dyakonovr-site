@@ -1,0 +1,12 @@
+.header {
+  padding: var(--big-offset) 0;
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__nav {
+    margin: 0 var(--middle-offset) 0 auto;
+  }
+}

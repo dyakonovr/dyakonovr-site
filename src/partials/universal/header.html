@@ -1,3 +1,7 @@
 <header class="header">
-  Это хедер
+  <div class="container header__container">
+    @include('../blocks/logo.html', {"extra_class": "header__logo"})
+    @include('../blocks/nav.html', {"extra_class": "header__nav"})
+    @include('../blocks/socials.html', {"extra_class": "header__socials"})
+  </div>
 </header>

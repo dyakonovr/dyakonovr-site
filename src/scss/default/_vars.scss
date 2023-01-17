@@ -1,13 +1,20 @@
 :root {
   // Цвета
-  --color-white: #fff;
-  --color-black: #000;
+  --color-white: rgb(224 224 224);
+  --color-black: #161616;
 
   // Шрифты
-  --font-family: "Merriweather";
+  --font-family: "PT Sans";
 
   // Размеры контейнера
-  --content-width: 1120px;
+  --content-width: 1200px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // Отступы
+
+  --big-offset: 40px;
+  --middle-offset: 20px;
+  --small-offset: 10px;
+  --section-offset: 50px;
 }
