@@ -1,3 +1,8 @@
-<footer class="footer">
-  
+<footer class="footer section">
+  <div class="footer__container container">
+    @include('../blocks/logo.html', {"curr_section": "footer"})
+    @include('../blocks/nav.html', {"curr_section": "footer"})
+    @include('../blocks/socials.html', {"curr_section": "footer"})
+    <p class="footer__copyright">© Created by dyakonovr. All rights Reserved</p>
+  </div>
 </footer>
