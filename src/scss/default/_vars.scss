@@ -1,6 +1,6 @@
 :root {
   // Цвета
-  --color-white: rgba(255 255 255 / 95%);
+  --color-white: #fff;
   --color-black: #161616;
   --color-main: #b146ea;
   --color-gray: rgb(148 148 148);
@@ -11,7 +11,7 @@
 
   // Размеры контейнера
   --content-width: 1200px;
-  --container-offset: 15px;
+  --container-offset: 30px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   // Отступы

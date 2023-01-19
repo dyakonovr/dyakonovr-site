@@ -3,32 +3,31 @@
   align-items: center;
 
   &__item {
-    border: 2px solid var(--color-white);
-    border-radius: 100%;
-    padding: 3px;
-
     &:not(:last-child) {
       margin: 0 5px 0 0;
     }
   }
 
+  &__icon {
+    fill: var(--color-white);
+    transition: fill 0.15s ease-in-out;
+  }
+
   &__link {
-    display: block;
-    width: 30px;
-    height: 30px;
-    background-size: 100%;
-    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--color-white);
+    border-radius: 100%;
+    padding: 3px;
+    transition: background-color 0.15s ease-in-out;
 
-    &--tg {
-      background-image: url("@svg/social/icon-tg.svg");
+    &:hover {
+      background-color: var(--color-white);
     }
+  }
 
-    &--vk {
-      background-image: url("@svg/social/icon-vk.svg");
-    }
-
-    &--git {
-      background-image: url("@svg/social/icon-git.svg");
-    }
+  &__item:hover &__icon {
+    fill: var(--color-main);
   }
 }

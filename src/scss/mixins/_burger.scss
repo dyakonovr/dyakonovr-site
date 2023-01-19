@@ -1,10 +1,11 @@
 @mixin burger {
   position: relative;
+  z-index: 6;
   border: none;
   padding: 0;
   width: var(--burger-width);
   height: var(--burger-height);
-  color: var(--color-main);
+  color: var(--color-white);
   background-color: transparent;
   cursor: pointer;
 

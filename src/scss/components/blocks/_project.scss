@@ -6,27 +6,49 @@
   &__image {
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
+    height: 100%;
 
     img {
       display: block;
+      height: 100%;
+    }
+
+    @include small-tablet {
+      border-top-right-radius: 15px;
+      border-bottom-left-radius: 0;
     }
   }
 
-  &__wrapper {
+  &__right {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    height: 100%;
+    padding: var(--middle-offset);
+    height: calc(100% - var(--middle-offset) * 2);
     text-align: center;
     background-color: var(--color-white);
+
+    @include small-tablet {
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 15px;
+      padding: var(--big-offset) var(--middle-offset);
+    }
+
+    @include mobile {
+      padding: var(--middle-offset);
+    }
   }
 
   &__title {
     margin: 0 0 var(--middle-offset);
     font-size: 35px;
+
+    @include tablet {
+      font-size: 25px;
+    }
   }
 
   &__descr {
@@ -34,14 +56,27 @@
     max-width: 80%;
     font-size: 20px;
     color: var(--color-gray);
+
+    @include tablet {
+      font-size: 18px;
+    }
   }
 
   &__link {
     margin: var(--big-offset) 0 0;
     color: var(--color-black);
+
+    @include tablet {
+      margin: var(--middle-offset) 0 0;
+    }
   }
 
   &:not(:last-child) {
     margin: 0 0 var(--big-offset);
+  }
+
+  @include small-tablet {
+    grid-template-columns: 1fr;
+    border-radius: 15px;
   }
 }

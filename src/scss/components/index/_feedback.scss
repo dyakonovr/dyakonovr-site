@@ -1,8 +1,19 @@
 .feedback {
   &__container {
+    position: relative;
+    z-index: 5;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+    margin-bottom: -200px;
     gap: var(--big-offset);
+
+    @include tablet {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include small-tablet {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__left {
@@ -11,16 +22,29 @@
     padding: calc(var(--big-offset) * 2);
     color: var(--color-black);
     background-color: var(--color-white);
+
+    @include tablet {
+      grid-column: span 2;
+      padding: var(--big-offset);
+    }
   }
 
   &__title {
     margin: 0;
     font-size: 50px;
+
+    @include mobile {
+      font-size: 30px;
+    }
   }
 
   &__descr {
     margin: var(--middle-offset) 0 0;
     font-size: 20px;
+
+    @include mobile {
+      font-size: 16px;
+    }
   }
 
   &__form {
@@ -62,6 +86,10 @@
     &:hover {
       color: var(--color-main);
       background-color: var(--color-white);
+    }
+
+    @include small-tablet {
+      max-width: 150px;
     }
   }
 }
