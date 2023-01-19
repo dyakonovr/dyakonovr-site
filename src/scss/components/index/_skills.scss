@@ -30,10 +30,19 @@
     margin: var(--big-offset) auto 0;
     max-width: 90%;
     gap: var(--big-offset);
+
+    @include mobile {
+      gap: var(--big-offset) var(--middle-offset);
+    }
   }
 
   &__item {
     width: 15%;
     min-width: 130px;
+
+    @include mobile {
+      width: 45%;
+      min-width: auto;
+    }
   }
 }

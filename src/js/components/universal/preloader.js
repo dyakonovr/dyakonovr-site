@@ -2,11 +2,25 @@ import disableScroll from '../../functions/disableScroll.js';
 import enableScroll from '../../functions/enableScroll.js';
 
 const preloader = document.querySelector('.preloader');
+const preloaderLogo = document.querySelector('.preloader__logo')
+const preloaderLogoAfter = document.querySelector('.preloader__shadow');
+const headerLogoСoordinates = document.querySelector('.header__logo').getBoundingClientRect();
+const preloaderLogoСoordinates = preloaderLogo.getBoundingClientRect();
+
+const preloaderLogoPos = {
+  top: preloaderLogoСoordinates.top + window.pageYOffset,
+  left: preloaderLogoСoordinates.left + window.pageXOffset
+};
+
+const headerLogoPos = {
+  top: headerLogoСoordinates.top + window.pageYOffset,
+  left: headerLogoСoordinates.left + window.pageXOffset
+};
+
 const images = document.images;
 const imagesTotal = images.length;
 let imagesLoaded = 0;
-const percentDisplay = document.querySelector('.preloader__percent');
-const progressDisplay = document.querySelector('.preloader__progress');
+
 
 if (preloader) {
 
@@ -22,14 +36,15 @@ if (preloader) {
   function imageLoaded() {
     imagesLoaded++;
     let percent = (((100 / imagesTotal) * imagesLoaded) << 0);
-    percentDisplay.innerHTML = percent + '%';
-    progressDisplay.style.width = percent + '%';
+    preloaderLogoAfter.style.width = `${percent}%`;
 
     if (imagesLoaded >= imagesTotal) {
       setTimeout(function () {
         if (!preloader.classList.contains('preloader__done')) {
+          preloaderLogo.classList.add("preloader__logo--done");
+          preloaderLogo.style.transform = `translate(-${preloaderLogoPos.left - headerLogoPos.left + 88}px, -${preloaderLogoPos.top - headerLogoPos.top + 28}px)`
           preloader.classList.add('preloader__done');
-          enableScroll();
+          setTimeout(enableScroll, 100);
         }
       }, 1200)
     }
