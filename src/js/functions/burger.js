@@ -12,11 +12,11 @@
     if (menu?.classList.contains('menu--active')) {
       burger?.setAttribute('aria-expanded', 'true');
       burger?.setAttribute('aria-label', 'Закрыть меню');
-      bodyEl.style.overflow = "hidden";
+      bodyEl.style.overflowY = "hidden";
     } else {
       burger?.setAttribute('aria-expanded', 'false');
       burger?.setAttribute('aria-label', 'Открыть меню');
-      bodyEl.style.overflow = "scroll";
+      bodyEl.style.overflowY = "scroll";
     }
   });
 
@@ -34,7 +34,7 @@
       burger?.setAttribute('aria-label', 'Открыть меню');
       burger.classList.remove('burger--active');
       menu.classList.remove('menu--active');
-      bodyEl.style.overflow = "scroll";
+      bodyEl.style.overflowY = "scroll";
     });
   });
 })();
