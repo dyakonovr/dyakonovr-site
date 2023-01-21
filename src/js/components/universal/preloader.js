@@ -37,6 +37,8 @@ if (preloader) {
     imagesLoaded++;
     let percent = (((100 / imagesTotal) * imagesLoaded) << 0);
     preloaderLogoAfter.style.width = `${percent}%`;
+    console.log('!!!');
+
 
     if (imagesLoaded >= imagesTotal) {
       setTimeout(function () {

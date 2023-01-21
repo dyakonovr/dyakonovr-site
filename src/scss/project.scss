@@ -11,17 +11,14 @@
 
 @import "./components/blocks/nav";
 @import "./components/blocks/socials";
-@import "./components/blocks/skill";
-@import "./components/blocks/project";
+@import "./components/blocks/property";
 @import "./components/blocks/review";
-@import "./components/blocks/feedback";
 
 // Компоненты страницы
 
 @import "./components/universal/preloader";
 @import "./components/universal/header";
-@import "./components/index/hero";
-@import "./components/index/skills";
-@import "./components/index/projects";
-@import "./components/index/reviews";
+@import "./components/project/hero";
+@import "./components/project/properties";
+@import "./components/project/description";
 @import "./components/universal/footer";

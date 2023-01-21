@@ -1,6 +1,7 @@
-<footer class="footer footer--custom">
+@if(feedback_section === true) {<footer class="footer footer--custom">}
+@if(feedback_section === false) {<footer class="footer">}
   <div class="footer__container container">
-    @include('../index/feedback.html')
+    @if (feedback_section === true) {@include('../blocks/feedback.html')}
     @include('../blocks/logo.html', {"curr_section": "footer"})
     @include('../blocks/nav.html', {"curr_section": "footer"})
     @include('../blocks/socials.html', {"curr_section": "footer"})

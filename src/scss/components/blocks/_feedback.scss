@@ -75,18 +75,8 @@
   &__btn {
     margin: auto auto 0;
     border: 1px solid var(--color-main);
-    border-radius: 15px;
-    padding: var(--small-offset) var(--middle-offset);
     width: 100%;
     max-width: 50%;
-    color: var(--color-white);
-    background-color: var(--color-main);
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
-
-    &:hover {
-      color: var(--color-main);
-      background-color: var(--color-white);
-    }
 
     @include small-tablet {
       max-width: 150px;

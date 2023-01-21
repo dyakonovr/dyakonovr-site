@@ -1,0 +1,7 @@
+.properties {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--big-offset);
+  }
+}

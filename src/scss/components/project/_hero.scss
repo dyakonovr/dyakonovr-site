@@ -1,0 +1,17 @@
+.hero {
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: var(--big-offset);
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 50px;
+  }
+
+  &__descr {
+    margin: var(--small-offset) 0 var(--big-offset);
+    font-size: 20px;
+  }
+}

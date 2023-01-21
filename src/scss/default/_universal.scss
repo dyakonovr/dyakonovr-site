@@ -39,5 +39,18 @@
 
 .box-shadow {
   border-radius: 15px;
-  box-shadow: 0 5px 10px 5px rgba(255, 255, 255, 20%); /* stylelint-disable color-function-notation */
+  box-shadow: 0 5px 10px 5px rgba(255, 255, 255, 20%);  /* stylelint-disable color-function-notation */
+}
+
+.btn {
+  border-radius: 15px;
+  padding: var(--small-offset) var(--middle-offset);
+  color: var(--color-white);
+  background-color: var(--color-main);
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+
+  &:hover {
+    color: var(--color-main);
+    background-color: var(--color-white);
+  }
 }

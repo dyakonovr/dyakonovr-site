@@ -1,0 +1,14 @@
+.description {
+  &__title {
+    margin: 0 0 var(--big-offset);
+  }
+
+  &__text {
+    margin: 0 0 var(--middle-offset);
+    font-size: 20px;
+  }
+
+  &__review {
+    margin: calc(var(--big-offset) * 2) 0 0;
+  }
+}
