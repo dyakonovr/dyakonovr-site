@@ -1,10 +1,10 @@
 .feedback {
   &__container {
     position: relative;
-    z-index: 5;
+    z-index: 1;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    margin-bottom: -200px;
+    margin-top: -300px;
     gap: var(--big-offset);
 
     @include tablet {

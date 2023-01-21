@@ -5,6 +5,10 @@
 
 .section {
   padding: var(--section-offset) 0;
+
+  &:nth-child(odd) {
+    background-color: var(--color-black);
+  }
 }
 
 .title {

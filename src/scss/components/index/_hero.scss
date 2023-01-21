@@ -40,4 +40,8 @@
       }
     }
   }
+
+  @include tablet {
+    padding-top: calc(var(--section-offset) * 2);
+  }
 }

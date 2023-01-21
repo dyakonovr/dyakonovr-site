@@ -1,5 +1,6 @@
 .header {
   padding: var(--big-offset) 0;
+  background-color: var(--color-black);
 
   &__container {
     display: flex;
@@ -17,7 +18,7 @@
     margin: 0 0 0 auto;
 
     @include tablet {
-      position: absolute;
+      position: fixed;
       left: 0;
       top: 0;
       z-index: 5;
@@ -95,5 +96,14 @@
     &--active {
       transform: translate(0, 0);
     }
+  }
+
+  @include tablet {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 4;
+    padding: var(--middle-offset) 0;
+    width: 100%;
   }
 }
