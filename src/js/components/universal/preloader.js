@@ -18,7 +18,7 @@ const headerLogoPos = {
 };
 
 const images = document.images;
-const imagesTotal = images.length;
+const imagesTotal = images.length; 
 let imagesLoaded = 0;
 
 
@@ -26,23 +26,25 @@ if (preloader) {
 
   disableScroll();
 
-  for (let i = 0; i < imagesTotal; i++) {
-    let imageClone = new Image();
-    imageClone.onload = imageLoaded;
-    imageClone.onerror = imageLoaded;
-    imageClone.src = images[i].src;
-  }
+  if (imagesTotal > 0) {
+    for (let i = 0; i < imagesTotal; i++) {
+      let imageClone = new Image();
+      imageClone.onload = imageLoaded;
+      imageClone.onerror = imageLoaded;
+      imageClone.src = images[i].src;
+    }
+  } else imageLoaded();
 
   function imageLoaded() {
     imagesLoaded++;
-    let percent = (((100 / imagesTotal) * imagesLoaded) << 0);
+    let percent = (((100 / (imagesTotal || 1)) * imagesLoaded) << 0);
     preloaderLogoAfter.style.width = `${percent}%`;
 
     if (imagesLoaded >= imagesTotal) {
       setTimeout(function () {
         if (!preloader.classList.contains('preloader__done')) {
           preloaderLogo.classList.add("preloader__logo--done");
-          preloaderLogo.style.transform = `translate(-${preloaderLogoPos.left - headerLogoPos.left + 88}px, -${preloaderLogoPos.top - headerLogoPos.top + 28}px)`
+          preloaderLogo.style.transform = `translate(-${preloaderLogoPos.left - headerLogoPos.left + 88}px, -${preloaderLogoPos.top - headerLogoPos.top + 28}px)`;
           preloader.classList.add('preloader__done');
           setTimeout(enableScroll, 100);
         }
