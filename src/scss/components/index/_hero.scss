@@ -1,4 +1,7 @@
 .hero {
+  height: auto;
+  min-height: calc(100vh - var(--section-offset) * 2 - 120px); // 120px - высота шапки
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -17,13 +20,13 @@
     max-width: 58%;
     font-size: 25px;
 
-    span {
-      color: var(--color-main);
-    }
-
     @include small-tablet {
       max-width: none;
     }
+  }
+
+  &__link {
+    color: var(--color-main);
   }
 
   &__image {
@@ -43,5 +46,6 @@
 
   @include tablet {
     padding-top: calc(var(--section-offset) * 2);
+    height: auto;
   }
 }

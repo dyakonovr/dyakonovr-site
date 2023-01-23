@@ -1,19 +1,20 @@
-fetch("https://63cd060bfba6420d4d67391b.mockapi.io/dyakonovr_site")
-  .then(response => response.json())
-  .then(response => {
-   const data = response[0];
+(function () {
+  fetch("https://63cd060bfba6420d4d67391b.mockapi.io/dyakonovr_site")
+    .then(response => response.json())
+    .then(response => {
+      const data = response[0];
 
-    renderProjects(data.projects);
-    renderReviews(data.reviews);
-  })
+      renderProjects(data.projects);
+      renderReviews(data.reviews);
+    })
 
-function renderProjects(data) {
-  const parentBlock = document.querySelector('#projects-list');
+  function renderProjects(data) {
+    const parentBlock = document.querySelector('#projects-list');
 
-  for (let projectName in data) {
-    const project = data[projectName];
+    for (let projectName in data) {
+      const project = data[projectName];
 
-    parentBlock.innerHTML += `
+      parentBlock.innerHTML += `
       <li class="projects__item project box-shadow">
         <div class="project__image" style="background-color: ${project.main_color};"><img src="${project.img}" alt="${projectName}"></div>
         <div class="project__right">
@@ -23,15 +24,15 @@ function renderProjects(data) {
         </div>
       </li>
     `;
+    }
   }
-}
 
-function renderReviews(data) {
-  const parentBlock = document.querySelector('#reviews-list');
-  for (let projectName in data) {
-    const project = data[projectName];
+  function renderReviews(data) {
+    const parentBlock = document.querySelector('#reviews-list');
+    for (let projectName in data) {
+      const project = data[projectName];
 
-    parentBlock.innerHTML += `
+      parentBlock.innerHTML += `
       <li class="reviews__item review">
         <div class="review__left">
           <div class="review__image"><img src="${project.img}" alt="${project.name}, ${project.position}"></div>
@@ -43,5 +44,6 @@ function renderReviews(data) {
         </div>
       </li>
     `;
+    }
   }
-}
+})();

@@ -15,25 +15,7 @@
   &__menu {
     display: flex;
     align-items: center;
-    margin: 0 0 0 auto;
-
-    @include tablet {
-      position: fixed;
-      left: 0;
-      top: 0;
-      z-index: 5;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      overflow-y: auto;
-      margin: 0;
-      width: 100%;
-      height: 100%;
-      background-color: var(--color-black);
-      transform: translate(0, -100%);
-      transition: transform 0.4s ease-in-out;
-    }
+    margin: 0 var(--middle-offset) 0 auto;
   }
 
   &__nav {
@@ -71,6 +53,13 @@
     }
   }
 
+  &__socials {
+    @include tablet {
+      z-index: 5;
+      order: 1;
+    }
+  }
+
   // BURGER
 
   .burger {
@@ -85,6 +74,8 @@
 
     @include tablet {
       display: block;
+      order: 2;
+      margin: 0;
     }
 
     @include mobile {
@@ -93,8 +84,26 @@
   }
 
   .menu {
-    &--active {
-      transform: translate(0, 0);
+    @include tablet {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow-y: auto;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--color-black);
+      transform: translate(0, -100%);
+      transition: transform 0.4s ease-in-out;
+
+      &--active {
+        transform: translate(0, 0);
+      }
     }
   }
 

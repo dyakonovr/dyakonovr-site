@@ -1,9 +1,14 @@
+import { isMobile } from './checkViewport.js';
+
 (function () {
   const burger = document?.querySelector('[data-burger]');
-  const menu = document?.querySelector('[data-menu]');
+  const menu = isMobile() ? document?.querySelector('[data-menu-mobile]') : document?.querySelector('[data-menu]');
+  menu.classList.add("menu"); // Добавляю класс "текущему меню" (для мобилок - header__menu, для планшетов и выше - header__nav)
+  
   const menuItems = document?.querySelectorAll('[data-menu-item]');
   const bodyEl = document?.querySelector('body');
   // const overlay = document?.querySelector('[data-menu-overlay]');
+
 
   burger?.addEventListener('click', (e) => {
     burger?.classList.toggle('burger--active');

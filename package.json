@@ -53,6 +53,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "css-loader": "^6.7.3",
     "inputmask": "^5.0.7",
     "just-validate": "^4.0.1",
