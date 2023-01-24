@@ -1,0 +1,12 @@
+.os-theme-dark.os-scrollbar>.os-scrollbar-track,
+.os-theme-dark.os-scrollbar>.os-scrollbar-track>.os-scrollbar-handle,
+.os-theme-light.os-scrollbar>.os-scrollbar-track,
+.os-theme-light.os-scrollbar>.os-scrollbar-track>.os-scrollbar-handle {
+  border-radius: 15px;
+}
+
+@media (max-width: 1400px) {
+  .os-scrollbar-vertical {
+    display: none;
+  }
+}

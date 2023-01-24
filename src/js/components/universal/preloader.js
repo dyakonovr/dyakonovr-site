@@ -2,6 +2,7 @@ import { isDesktop } from '../../functions/checkViewport.js';
 import disableScroll from '../../functions/disableScroll.js';
 import enableScroll from '../../functions/enableScroll.js';
 
+
 (function () {
   const preloader = document.querySelector('.preloader');
   const preloaderLogo = document.querySelector('.preloader__logo')
@@ -11,6 +12,7 @@ import enableScroll from '../../functions/enableScroll.js';
 
   // Определяю <section class="hero"></section> и удаляю класс для последующей анимации
   const heroBlockContainer = document.querySelector('#hero-container');
+  console.log(heroBlockContainer.classList);
   heroBlockContainer.classList.remove('aos-animate');
   // Определяю <section class="hero"></section> и удаляю класс для последующей анимации END
 

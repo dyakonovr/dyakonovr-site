@@ -4,6 +4,7 @@
 
 import "./default/_vendor.js";
 
+import "./components/universal/customScrollbar.js";
 import "./components/project/fetchData.js";
 import "./components/universal/aosInit.js";
 import "./components/universal/preloader.js";

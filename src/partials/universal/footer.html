@@ -1,6 +1,6 @@
 
-@if(feedback_section === true) {<footer class="footer footer--custom" data-aos="fade-up" data-aos-offset="600">}
-@if(feedback_section === false) {<footer class="footer" data-aos="fade-up" data-aos-offset="1200">}
+@if(feedback_section === true) {<footer class="footer footer--custom" data-aos="fade-down" data-aos-offset="600">}
+@if(feedback_section === false) {<footer class="footer" data-aos="fade-down" data-aos-offset="1120">}
   <div class="footer__container container">
     @if (feedback_section === true) {@include('../blocks/feedback.html')}
     @include('../blocks/logo.html', {"curr_section": "footer"})
