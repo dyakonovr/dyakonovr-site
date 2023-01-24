@@ -4,7 +4,6 @@
 
 import "./default/_vendor.js";
 
-import "./components/universal/customScrollbar.js";
 import "./components/universal/aosInit.js";
 import "./components/universal/preloader.js";
 import "./functions/burger.js";

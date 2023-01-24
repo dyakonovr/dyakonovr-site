@@ -12,7 +12,6 @@ import enableScroll from '../../functions/enableScroll.js';
 
   // Определяю <section class="hero"></section> и удаляю класс для последующей анимации
   const heroBlockContainer = document.querySelector('#hero-container');
-  console.log(heroBlockContainer.classList);
   heroBlockContainer.classList.remove('aos-animate');
   // Определяю <section class="hero"></section> и удаляю класс для последующей анимации END
 
