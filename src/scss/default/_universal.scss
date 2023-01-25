@@ -1,6 +1,37 @@
 // Универсальные стили
 .logo {
+  position: relative;
   font-size: 40px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    user-select: none;
+  }
+
+  &::before {
+    left: -6px;
+    top: 3px;
+    border-top: 1px solid currentcolor;
+    border-left: 1px solid currentcolor;
+  }
+
+  &::after {
+    right: -6px;
+    bottom: 0;
+    border-right: 1px solid currentcolor;
+    border-bottom: 1px solid currentcolor;
+  }
+
+  &:hover::before,
+  &:hover::after {
+    opacity: 1;
+  }
 }
 
 .section {
@@ -28,8 +59,7 @@
     bottom: 0;
     width: 0;
     height: 1px;
-    background-color: currentColor;
-    /* stylelint-disable value-keyword-case */
+    background-color: currentcolor;
     transition: width 0.2s ease-in-out;
   }
 
@@ -58,8 +88,7 @@
 
 .box-shadow {
   border-radius: 15px;
-  box-shadow: 0 5px 10px 5px rgba(255, 255, 255, 20%);
-  /* stylelint-disable color-function-notation */
+  box-shadow: 0 5px 10px 5px rgba(255, 255, 255, 20%); /* stylelint-disable color-function-notation */
 }
 
 .btn {

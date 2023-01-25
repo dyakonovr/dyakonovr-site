@@ -1,12 +1,12 @@
-.os-theme-dark.os-scrollbar>.os-scrollbar-track,
-.os-theme-dark.os-scrollbar>.os-scrollbar-track>.os-scrollbar-handle,
-.os-theme-light.os-scrollbar>.os-scrollbar-track,
-.os-theme-light.os-scrollbar>.os-scrollbar-track>.os-scrollbar-handle {
-  border-radius: 15px;
+::-webkit-scrollbar {
+  width: 5px;
 }
 
-@media (max-width: 1400px) {
-  .os-scrollbar-vertical {
-    display: none;
-  }
+::-webkit-scrollbar-track {
+  background: var(--color-black);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background: var(--color-white);
 }

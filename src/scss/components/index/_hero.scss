@@ -25,10 +25,6 @@
     }
   }
 
-  &__link {
-    color: var(--color-main);
-  }
-
   &__image {
     margin: var(--middle-offset) 0 0;
 
@@ -42,6 +38,11 @@
         height: 150px;
       }
     }
+  }
+
+  &__link,
+  &__descr span {
+    color: var(--color-main);
   }
 
   @include tablet {

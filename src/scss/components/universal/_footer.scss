@@ -30,6 +30,12 @@
   }
 
   &--custom {
+    margin-top: calc(var(--section-offset) * 3);
     padding-top: calc(var(--section-offset) + 100px);
+
+    @media (max-width: 768px) or (max-height: 350px) {
+      margin: 0;
+      padding-top: var(--section-offset);
+    }
   }
 }

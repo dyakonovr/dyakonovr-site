@@ -1,8 +1,4 @@
 .project {
-  display: grid;
-  align-items: center;
-  grid-template-columns: repeat(2, 1fr);
-
   &__image {
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -16,6 +12,21 @@
     @include small-tablet {
       border-top-right-radius: 15px;
       border-bottom-left-radius: 0;
+    }
+  }
+
+  &__ref {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+
+    &:hover .project__link::before {
+      width: 100%;
+    }
+
+    @include small-tablet {
+      grid-template-columns: 1fr;
+      border-radius: 15px;
     }
   }
 
@@ -63,8 +74,21 @@
   }
 
   &__link {
+    position: relative;
+    overflow: hidden;
     margin: var(--big-offset) 0 0;
     color: var(--color-black);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background-color: currentcolor;
+      transition: width 0.2s ease-in-out;
+    }
 
     @include tablet {
       margin: var(--middle-offset) 0 0;
@@ -73,10 +97,5 @@
 
   &:not(:last-child) {
     margin: 0 0 var(--big-offset);
-  }
-
-  @include small-tablet {
-    grid-template-columns: 1fr;
-    border-radius: 15px;
   }
 }

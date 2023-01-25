@@ -10,6 +10,11 @@
   &__logo {
     z-index: 6;
     margin: -10px 0 0;
+
+    @include tablet {
+      margin: 0;
+      font-size: 30px;
+    }
   }
 
   &__menu {
@@ -112,7 +117,7 @@
     left: 0;
     top: 0;
     z-index: 4;
-    padding: var(--middle-offset) 0;
+    padding: var(--small-offset) 0;
     width: 100%;
   }
 }

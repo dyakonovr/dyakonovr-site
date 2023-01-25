@@ -1,3 +1,5 @@
+import { isDesktop } from './../../functions/checkViewport.js';
+
 (function () {
   fetch("https://63cd060bfba6420d4d67391b.mockapi.io/dyakonovr_site")
     .then(response => response.json())
@@ -13,6 +15,8 @@
       renderProperties(project);
       renderDescription(project, review);
     })
+  
+  // Функции рендера
 
   function renderHero(project, projectName) {
     const parentBlock = document.querySelector('#hero-container');
@@ -44,14 +48,15 @@
   }
 
   function renderDescription(project, review) {
-    const parentBlock = document.querySelector('#description');
+    const parentBlock = document.querySelector('#description-content');
+    const animationAttr = isDesktop() ? `data-aos="fade-up" data-aos-offset="200"` : '';
 
     for (let descr of project.large_descr) {
-      parentBlock.innerHTML += `<p class="description__text">${descr}</p>`;
+      parentBlock.innerHTML += `<p class="description__text" ${animationAttr}>${descr}</p>`;
     }
 
     parentBlock.innerHTML += `
-      <li class="description__review review">
+      <li class="description__review review" ${animationAttr}>
         <div class="review__left">
           <div class="review__image"><img src="${review.img}" alt="${review.name}, ${review.position}"></div>
           <strong class="review__title">${review.name}</strong>
