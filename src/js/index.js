@@ -8,4 +8,17 @@ import "./components/universal/aosInit.js";
 import "./components/universal/preloader.js";
 import "./components/universal/anchors.js";
 import "./functions/burger.js";
-import "./components/index/fetchData.js";
+
+// Рендер блоков
+import renderProjects from './components/index/renderProjects.js';
+import renderReviews from './components/index/renderReviews.js';
+import vars from './default/_vars.js';
+
+fetch(vars.url)
+  .then(response => response.json())
+  .then(response => {
+    const data = response[0];
+
+    renderProjects(data.projects);
+    renderReviews(data.reviews);
+  })

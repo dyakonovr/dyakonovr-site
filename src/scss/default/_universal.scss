@@ -22,8 +22,8 @@
   }
 
   &::after {
-    right: -6px;
-    bottom: 0;
+    right: -7px;
+    bottom: 1px;
     border-right: 1px solid currentcolor;
     border-bottom: 1px solid currentcolor;
   }
@@ -50,6 +50,7 @@
 
 .link-hover {
   position: relative;
+  display: inline-flex;
   overflow: hidden;
 
   &::before {
@@ -101,5 +102,61 @@
   &:hover {
     color: var(--color-main);
     background-color: var(--color-white);
+  }
+}
+
+.neon-title {
+  text-shadow:
+    0 0 20px rgba(255, 255, 255, 30%),
+    0 0 22px rgba(255, 255, 255, 30%),
+    0 0 40px rgba(177, 70, 234, 30%),
+    0 0 60px rgba(177, 70, 234, 30%),
+    0 0 80px rgba(177, 70, 234, 30%), // (177, 70, 234) = --color-main
+    0 0 100px rgba(177, 70, 234, 30%),
+    0 0 140px rgba(177, 70, 234, 30%),
+    0 0 200px rgba(177, 70, 234, 30%);
+  animation: neon 3s 2;
+  animation-timing-function: linear;
+}
+
+@keyframes neon {
+  0% {
+    opacity: 1;
+  }
+
+  45% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  55% {
+    opacity: 1;
+  }
+
+  60% {
+    opacity: 0;
+  }
+
+  63% {
+    opacity: 1;
+  }
+
+  93% {
+    opacity: 1;
+  }
+
+  95% {
+    opacity: 0;
+  }
+
+  97% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

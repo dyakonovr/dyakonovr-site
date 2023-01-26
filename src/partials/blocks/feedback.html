@@ -4,9 +4,17 @@
       <h2 class="feedback__title">Остались вопросы?</h2>
       <p class="feedback__descr">Заполните небольшую форму и в ближайшее время я свяжусь с Вами!</p>
     </div>
-    <form action="#" class="feedback__form form box-shadow">
+    <form action="#" method="post" class="feedback__form form box-shadow">
       <label class="form__label">
-        <input type="text" name="Имя" class="input-reset form__input" placeholder="Ваше Имя" required>
+        <input type="text" name="Имя" class="input-reset form__input input-name" placeholder="Ваше Имя" required>
+      </label>
+      <label class="form__select form-select" for="select">
+        <select id="select" required="required">
+          <option value="" disabled="disabled" selected="selected" class="form__option">Способ связи с Вами</option>
+          <option value="email" class="form__option">Email</option>
+          <option value="tg" class="form__option">Telegram</option>
+          <option value="whatsapp" class="form__option">WhatsApp</option>
+        </select>
       </label>
       <label class="form__label">
         <input type="text" name="Имя" class="input-reset form__input" placeholder="Почта или Telegram" required>

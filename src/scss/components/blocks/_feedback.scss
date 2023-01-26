@@ -18,6 +18,9 @@
   }
 
   &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     grid-column: span 4;
     border-radius: 15px;
     padding: calc(var(--big-offset) * 2);
@@ -63,22 +66,74 @@
 }
 
 .form {
-  &__label {
-    &:not(:last-child) {
-      margin: 0 0 var(--middle-offset);
-    }
-  }
-
   &__input {
-    border-radius: 8px;
+    border-radius: 3px;
     padding: 2px 10px;
     width: calc(100% - 10px * 2);
     height: 40px;
     background-color: var(--background-input);
+
+    &:focus-visible {
+      outline: 2px solid var(--color-main);
+    }
+  }
+
+  &__select {
+    position: relative;
+    margin: var(--middle-offset) 0;
+    height: 44px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      display: block;
+      width: 10px;
+      height: 10px;
+      background-image: url("@svg/arrow.svg");
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      transform: translate(0, -50%);
+      pointer-events: none;
+    }
+
+    select {
+      appearance: none;
+      border: 2px solid var(--background-input);
+      border-radius: 3px;
+      padding: 10px;
+      width: calc(100% - 12px * 2);
+      box-shadow: 0 1px 3px -2px #9098a9;
+      font-family: inherit;
+      font-size: 16px;
+      background: var(--background-input);
+      transition: all 150ms ease;
+      cursor: pointer;
+
+      &:required {
+        &:invalid {
+          color: #5a667f;
+        }
+      }
+
+      &:focus {
+        outline: none;
+        border-color: var(--color-main);
+      }
+    }
+  }
+
+  &__option {
+    color: var(--color-black);
+
+    &[value=""][disabled] {
+      display: none;
+    }
   }
 
   &__btn {
-    margin: auto auto 0;
+    margin: var(--middle-offset) auto 0;
     border: 1px solid var(--color-main);
     width: 100%;
     max-width: 50%;
