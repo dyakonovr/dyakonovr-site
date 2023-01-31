@@ -11,7 +11,7 @@
   }
 
   &__list {
-    @include mobile {
+    @include small-tablet {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -23,8 +23,14 @@
   &__item {
     text-align: center;
 
-    @include mobile {
+    @include small-tablet {
       margin: 0;
+    }
+  }
+
+  &__link {
+    @include small-tablet {
+      font-size: 22px;
     }
   }
 
