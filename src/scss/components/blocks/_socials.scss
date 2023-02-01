@@ -3,6 +3,7 @@
   align-items: center;
 
   &__item {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,7 +22,19 @@
 
   &__icon {
     fill: var(--color-white);
-    transition: fill 0.15s ease-in-out;
+    transform: scale(0.95);
+
+    &,
+    path,
+    polygon {
+      transition: fill 0.05s ease-in-out;
+    }
+
+    &--gmail {
+      fill: transparent;
+      stroke: var(--color-white);
+      stroke-width: 2px;
+    }
 
     @include mobile {
       width: 40px;
@@ -37,6 +50,49 @@
   }
 
   &__item:hover &__icon {
-    fill: var(--color-main);
+    &--vk {
+      fill: #4c75a3;
+    }
+
+    &--tg {
+      fill: #229ed9;
+    }
+
+    &--gmail {
+      transform: scale(0.9);
+
+      path.a {
+        fill: #4caf50;
+        stroke: #4caf50;
+      }
+
+      path.b {
+        fill: #1e88e5;
+        stroke: #1e88e5;
+      }
+
+      polygon.c {
+        fill: #e53935;
+        stroke: #e53935;
+      }
+
+      path.d {
+        fill: #c62828;
+        stroke: #c62828;
+      }
+
+      path.e {
+        fill: #fbc02d;
+        stroke: #fbc02d;
+      }
+    }
+
+    &--whatsapp {
+      fill: #1ea34f;
+    }
+
+    &--git {
+      fill: #0d2636;
+    }
   }
 }
