@@ -88,10 +88,15 @@
       height: 1px;
       background-color: currentcolor;
       transition: width 0.2s ease-in-out;
+
+      @include tablet {
+        display: none;
+      }
     }
 
     @include tablet {
       margin: var(--middle-offset) 0 0;
+      text-decoration: underline;
     }
   }
 
