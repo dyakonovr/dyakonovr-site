@@ -29,4 +29,12 @@
     margin: var(--small-offset) 0 var(--big-offset);
     font-size: 20px;
   }
+
+  &__link {
+    color: var(--color-white);
+
+    &:hover {
+      color: var(--color-main);
+    }
+  }
 }

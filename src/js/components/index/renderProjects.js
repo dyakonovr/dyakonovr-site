@@ -16,5 +16,6 @@ export default function renderProjects(data) {
           </a>
       </li>
     `;
+
   }
 }

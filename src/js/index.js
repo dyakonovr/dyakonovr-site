@@ -7,6 +7,7 @@ import "./default/_vendor.js";
 import "./components/universal/aosInit.js";
 import "./components/universal/preloader.js";
 import "./components/universal/anchors.js";
+import "./components/index/skillsSwiper.js";
 import "./functions/burger.js";
 
 // Рендер блоков

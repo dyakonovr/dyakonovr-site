@@ -16,7 +16,7 @@
     left: 0;
     width: 100%;
     height: var(--burger-line-height);
-    background-color: currentColor;
+    background-color: currentcolor;
     transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
   }
 
@@ -34,7 +34,7 @@
     top: 50%;
     width: 100%;
     height: var(--burger-line-height);
-    background-color: currentColor;
+    background-color: currentcolor;
     transform: translateY(-50%);
     transition: transform 0.3s ease-in-out;
   }

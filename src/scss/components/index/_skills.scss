@@ -38,13 +38,22 @@
     }
   }
 
-  &__item {
-    width: 15%;
-    min-width: 130px;
+  &__swiper {
+    --top-slider-offset: 60px;
+    --bottom-slider-offset: 75px;
 
-    @include mobile {
-      width: 45%;
-      min-width: auto;
+    margin-top: var(--top-slider-offset);
+    padding-bottom: var(--bottom-slider-offset) !important;
+    max-width: 100%;
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      top: calc(50% - var(--bottom-slider-offset) / 2);
+      color: var(--color-white);
+    }
+
+    .swiper-pagination-bullet {
+      background: var(--color-white);
     }
   }
 }
