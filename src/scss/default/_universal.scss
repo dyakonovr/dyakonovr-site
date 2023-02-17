@@ -88,12 +88,6 @@
   }
 }
 
-.box-shadow {
-  border-radius: 15px;
-  box-shadow: 0 5px 10px 5px rgba(255, 255, 255, 20%);
-  /* stylelint-disable color-function-notation */
-}
-
 .btn {
   border-radius: 15px;
   padding: var(--small-offset) var(--middle-offset);
@@ -165,9 +159,9 @@
 
 .swiper-button-prev,
 .swiper-button-next {
-  color: var(--color-white) !important; 
+  color: var(--color-white) !important;
 }
 
 .swiper-pagination-bullet {
-  background: var(--color-white) !important; 
+  background: var(--color-white) !important;
 }

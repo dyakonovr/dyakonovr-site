@@ -10,7 +10,7 @@ export default function renderReviews(data) {
           <strong class="review__title">${project.name}</strong>
           <span class="review__position">${project.position}</span>
         </div>
-        <div class="review__bottom box-shadow">
+        <div class="review__bottom">
           <p class="review__text">${project.text}</p>
         </div>
       </div>

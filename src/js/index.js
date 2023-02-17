@@ -8,6 +8,7 @@ import "./components/aosInit.js";
 import "./components/preloader.js";
 import "./components/skillsSwiper.js";
 import "./components/reviewsSwiper.js";
+import "./components/notification.js";
 import "./functions/burger.js";
 
 // Рендер блоков

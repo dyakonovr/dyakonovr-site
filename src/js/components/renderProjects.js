@@ -4,8 +4,6 @@ export default function renderProjects(data) {
   for (let projectName in data) {
     const project = data[projectName];
 
-    console.log(project);
-
     parentBlock.innerHTML += `
       <li class="projects__item project">
         <img src="${project.imgs.preview}" alt="${projectName} preview" class="project__preview"/>

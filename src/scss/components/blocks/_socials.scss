@@ -10,6 +10,7 @@
     border: 2px solid var(--color-white);
     border-radius: 100%;
     transition: background-color 0.15s ease-in-out;
+    cursor: pointer;
 
     &:not(:last-child) {
       margin: 0 7px 0 0;

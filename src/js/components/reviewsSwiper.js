@@ -1,4 +1,4 @@
-import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
+import Swiper, { Navigation, Autoplay } from 'swiper';
 import 'swiper/css'
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -7,13 +7,8 @@ const reviewsSwiper = new Swiper('#reviews-swiper', {
   // spaceBetween: 15,
   slidesPerView: 1,
   loop: true,
-  modules: [Navigation, Pagination, Autoplay],
+  modules: [Navigation, Autoplay],
   direction: 'horizontal',
-
-  pagination: {
-    el: '.swiper-pagination--reviews',
-    clickable: true,
-  },
 
   speed: 1000,
 
