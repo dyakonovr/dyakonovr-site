@@ -8,6 +8,11 @@
   background-size: cover;
   background-repeat: no-repeat;
 
+  &__preview {
+    border-radius: 15px;
+    height: 100%;
+  }
+
   &__wrapper {
     position: absolute;
     left: 0;

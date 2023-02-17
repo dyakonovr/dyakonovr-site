@@ -4,7 +4,7 @@ export default function renderReviews(data) {
     const project = data[projectName];
 
     parentBlock.innerHTML += `
-      <div class="swiper reviews__item review">
+      <div class="swiper-slide reviews__item review">
         <div class="review__top">
           <div class="review__image"><img src="${project.img}" alt="${project.name}, ${project.position}"></div>
           <strong class="review__title">${project.name}</strong>

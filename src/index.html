@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-@include('partials/universal/head.html', {
+@include('partials/head.html', {
 "stylesFileName": "index",
 "scriptsFileName": "index",
 "title": "dyakonovr - верстка сайтов на заказ",
@@ -9,15 +9,15 @@
 })
 
 <body>
-  @include('partials/universal/preloader.html')
-  @include('partials/universal/header.html')
+  @include('partials/preloader.html')
+  @include('partials/header.html')
   <main class="main">
-    @include('partials/index/hero.html')
-    @include('partials/index/skills.html')
-    @include('partials/index/projects.html')
-    @include('partials/index/reviews.html')
+    @include('partials/hero.html')
+    @include('partials/skills.html')
+    @include('partials/projects.html')
+    @include('partials/reviews.html')
   </main>
-  @include('partials/universal/footer.html')
+  @include('partials/footer.html')
 </body>
 
 </html>

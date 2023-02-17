@@ -1,6 +1,6 @@
-import { isDesktop } from '../../functions/checkViewport.js';
-import disableScroll from '../../functions/disableScroll.js';
-import enableScroll from '../../functions/enableScroll.js';
+import { isDesktop } from '../functions/checkViewport.js';
+import disableScroll from '../functions/disableScroll.js';
+import enableScroll from '../functions/enableScroll.js';
 
 const preloader = document.querySelector('.preloader');
 const preloaderLogo = document.querySelector('.preloader__logo')
