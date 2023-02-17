@@ -13,7 +13,7 @@ import "./functions/burger.js";
 import vars from './default/_vars.js';
 import renderHero from './components/project/renderHero.js';
 import renderProperties from './components/project/renderProperties.js';
-import renderDescription from './components/project/renderDescription.js';
+import renderDescriptionAndReview from './components/project/renderDescriptionAndReview.js';
 
 fetch(vars.url)
   .then(response => response.json())
@@ -22,10 +22,11 @@ fetch(vars.url)
 
     const GETparams = (new URL(document.location)).searchParams;
     const projectName = GETparams.get("name");
+    
     const project = data.projects[projectName];
     const review = data.reviews[projectName];
 
     renderHero(project, projectName);
     renderProperties(project);
-    renderDescription(project, review);
+    renderDescriptionAndReview(project, review);
   })

@@ -1,8 +1,26 @@
 .reviews {
+  &__title {
+    margin: 0 0 var(--big-offset);
+  }
+
   &__list {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: var(--big-offset) 0 0;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    @include tablet {
+      top: 40%;
+    }
+
+    @include small-tablet {
+      top: 30%;
+    }
+
+    @include mobile {
+      top: 15%;
+    }
   }
 }

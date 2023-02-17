@@ -8,7 +8,7 @@ export default function renderHero(project, projectName) {
         <a href="#" class="hero__link link-hover link-hover-different">Ссылка на работу</a>
       </div>
       <div class="hero__image">
-        <img src="${project.img}" alt="${projectName} screenshot">
+        <img src="${project.imgs.fullscreen}" alt="${projectName} screenshot">
       </div>
     `;
 }

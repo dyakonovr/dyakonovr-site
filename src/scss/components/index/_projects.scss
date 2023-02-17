@@ -1,5 +1,10 @@
 .projects {
   &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     margin: var(--big-offset) 0 0;
+    gap: var(--middle-offset);
   }
 }

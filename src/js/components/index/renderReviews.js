@@ -4,16 +4,16 @@ export default function renderReviews(data) {
     const project = data[projectName];
 
     parentBlock.innerHTML += `
-      <li class="reviews__item review">
-        <div class="review__left">
+      <div class="swiper reviews__item review">
+        <div class="review__top">
           <div class="review__image"><img src="${project.img}" alt="${project.name}, ${project.position}"></div>
           <strong class="review__title">${project.name}</strong>
           <span class="review__position">${project.position}</span>
         </div>
-        <div class="review__right box-shadow">
+        <div class="review__bottom box-shadow">
           <p class="review__text">${project.text}</p>
         </div>
-      </li>
+      </div>
     `;
   }
 }

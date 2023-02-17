@@ -8,6 +8,7 @@ import "./components/universal/aosInit.js";
 import "./components/universal/preloader.js";
 import "./components/universal/anchors.js";
 import "./components/index/skillsSwiper.js";
+import "./components/index/reviewsSwiper.js";
 import "./functions/burger.js";
 
 // Рендер блоков
@@ -21,5 +22,5 @@ fetch(vars.url)
     const data = response[0];
 
     renderProjects(data.projects);
-    renderReviews(data.reviews);
+    // renderReviews(data.reviews);
   })

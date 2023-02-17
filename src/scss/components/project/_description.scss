@@ -9,6 +9,41 @@
   }
 
   &__review {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(5, 1fr);
     margin: calc(var(--big-offset) * 2) 0 0;
+    gap: var(--big-offset);
+
+    .review {
+      &__image {
+        width: 100px;
+        height: 100px;
+
+        @include mobile {
+          width: 200px;
+          height: 200px;
+        }
+      }
+
+      &__top {
+        width: auto;
+
+        @include mobile {
+          margin: 0 auto;
+        }
+      }
+
+      &__bottom {
+        grid-column: span 4;
+        margin: 0;
+        max-width: none;
+      }
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: var(--big-offset) 0;
+    }
   }
 }
